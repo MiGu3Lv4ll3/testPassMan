@@ -1,0 +1,151 @@
+
+/**************************************************************
+********************** grid card ******************************
+**************************************************************/
+.grid-view{
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+}
+  
+  .grid-card-container{
+    width: 230px;
+    margin: 5px 5px;
+    animation: fadein;
+    /* animation-duration: .3s; */
+  }
+  .grid-card-container .grid-card {
+      position: relative;
+      padding: 0 20px 10px;
+      background-color: #fff;
+      -webkit-border-radius: 10px;
+      border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(34, 35, 58, 0.2);
+      -webkit-transition: all .3s ease-in-out;
+      -moz-transition: all .3s ease-in-out;
+      -o-transition: all .3s ease-in-out; 
+      transition: all .3s ease-in-out;
+      
+  }
+  
+  .grid-card-container:hover .grid-card {
+      box-shadow: 0px 5px 10px rgba(34, 35, 58, 0.2);
+      -webkit-transform: translateY(-3px);
+      -ms-transform: translateY(-3px);
+      transform: translateY(-3px);
+  }
+  
+  .grid-card-container .grid-card h4,
+  .grid-card-container .grid-card h5 {
+      font-weight: 600;
+      text-align: center;
+      text-transform: uppercase;
+      margin: 15px 0;
+  }
+  
+  .grid-card-container .grid-card .email{
+    margin-bottom: 20px;
+  }
+  
+  .grid-card-container .grid-card .email > p,
+  .grid-card-container .grid-card .email > h4 {
+      text-align: center;
+  }
+  .grid-card-container .grid-card .email > p{
+      margin-bottom: 0 !important;
+  }
+  .grid-card-container .grid-card .email > h4{
+      margin: 5px 0;
+      text-transform: lowercase;
+  }
+  
+  .grid-card-container .grid-card .thumbnail {
+      position: relative;
+      overflow: hidden;
+      margin: 0 -20px;
+    max-height: 131px;
+      -webkit-border-radius: 10px 10px 0 0;
+      border-radius: 10px 10px 0 0;
+  }
+  
+  .grid-card-container .grid-card .thumbnail img {
+    width: 100%;
+      -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+      transition: all 1s;
+  }
+  .grid-card-container .grid-card .grid-card-fav {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    right: 0px;
+    top: 5px;
+    color: #fff; 
+    margin: 0; 
+    z-index: 1; 
+  }
+  .grid-card-container .grid-card .grid-card-fav span{
+    cursor: pointer;
+  }
+  .favorite{
+    color: rgb(255, 217, 0); 
+  }
+  
+  .grid-card-container .grid-card .title{
+    position: relative;
+  }
+  
+  .grid-card-container .grid-card .title .logo {
+    position: absolute;
+    top: -40px;
+    left: -10px;
+      width: 50px;
+    border-radius: 50%;
+    padding: 3px;
+    background-color: #fff;
+  }
+  
+  .grid-card-container .grid-card:hover .thumbnail img {
+      -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      transform: scale(1.1);
+  }
+  
+  .grid-card-container .grid-card .date {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+    }
+.grid-card-container .grid-card .date > span {
+    display: flex;
+    align-items: center;
+}
+  
+  .grid-card-container .grid-card .category {
+    background-image: linear-gradient(147deg, #fe8a39 0%, #fd3838 74%);
+    padding: 3px 10px;
+    border-radius: 50px;
+    color: #fff;
+    box-shadow: 0px 14px 80px rgba(252, 56, 56, 0.4);
+    font-size: .8rem;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .grid-card-container .grid-card .by{
+    font-size: 10px;
+    color: #7b7992;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  @keyframes fadein {
+    from{
+      opacity: 0;
+    }
+    to{
+      opacity: 1;
+    }
+  }
